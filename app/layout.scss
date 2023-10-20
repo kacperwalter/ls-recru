@@ -19,6 +19,8 @@ body {
   font-size: 1.6rem;
   background-color: var(--color-dark);
   color: var(--color-white);
+  display: grid;
+  grid-template-columns: 1fr 80%;
 }
 
 body,

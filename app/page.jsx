@@ -1,7 +1,12 @@
-export default function Home() {
+import AppView from "./components/AppView/AppView"
+import Main from "./components/Main/Main"
+
+const Home = () => {
   return (
-   <>
-   <p>Font testing</p>
-   </>
+    <AppView>
+      <Main />
+    </AppView>
   )
 }
+
+export default Home
