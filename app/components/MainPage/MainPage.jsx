@@ -18,9 +18,7 @@ const getAllCharacters = async (characterCount) => {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
     return 0;
-  });
-
-  // allCharacters.sort((a, b) => a.name.localeCompare(b.name));
+  })
 
   return allCharacters
 }
@@ -35,7 +33,7 @@ const Main = async () => {
         {characters.map((character, index) => (
           <CharacterCard 
             key={index}
-            name={character.name}
+            data={character}
           />
         ))}
       </section>

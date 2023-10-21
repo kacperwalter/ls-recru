@@ -1,18 +1,22 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import './CharacterCard.scss'
 
+import { parseStringToSlug } from '@/app/utils/parseStringToSlug'
+
 import temporaryLogo from "@/public/temp-avatar.jpeg"
 
-const CharacterCard = ({ name, avatar }) => {
+const CharacterCard = ({ data }) => {
   return (
     <article className="character-card">
       <Image
         className="character-card__avatar" 
         src={temporaryLogo}
-        alt={name}
+        alt={data.name}
       />
-      <h3 className="character-card__heading">{name}</h3>
+      <h3 className="character-card__heading">{data.name}</h3>
+      <Link href={`/characters/${parseStringToSlug(data.name)}`} data={data}>More about this character</Link>
     </article>
   )
 }
