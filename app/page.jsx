@@ -1,11 +1,12 @@
-import AppView from "./components/AppView/AppView"
-import Main from "./components/Main/Main"
+import Sidebar from "./components/Sidebar/Sidebar"
+import MainPage from "./components/MainPage/MainPage"
 
 const Home = () => {
   return (
-    <AppView>
-      <Main />
-    </AppView>
+    <>
+      <Sidebar />
+      <MainPage />
+    </>
   )
 }
 
