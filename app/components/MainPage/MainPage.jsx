@@ -14,19 +14,19 @@ const getAllCharacters = async (characterCount) => {
     allCharacters.push(await getCharacter(i))
   }
 
-  return allCharacters
+  return allCharacters.sort((a, b) => a.name.localeCompare(b.name))
 }
 
 const Main = async () => {
-  const characters = await getAllCharacters(82)
+  const characters = await getAllCharacters(3)
 
   return (
     <main>
       <h1>Star Wars Characters</h1>
       <section>
-        {characters.map(character => (
+        {characters.map((character, index) => (
           <CharacterCard 
-            key={character.name}
+            key={index}
             name={character.name}
           />
         ))}
