@@ -1,0 +1,11 @@
+.character-card {
+  width: 100%;
+  border-bottom: 1px solid var(--color-white);
+  display: flex;
+  padding-top: 5rem;
+  padding-bottom: 5em;
+
+  &__avatar {
+    width: 10rem;
+  }
+}

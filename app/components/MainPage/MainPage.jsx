@@ -14,11 +14,19 @@ const getAllCharacters = async (characterCount) => {
     allCharacters.push(await getCharacter(i))
   }
 
-  return allCharacters.sort((a, b) => a.name.localeCompare(b.name))
+  allCharacters.sort((a, b) => {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
+  // allCharacters.sort((a, b) => a.name.localeCompare(b.name));
+
+  return allCharacters
 }
 
 const Main = async () => {
-  const characters = await getAllCharacters(3)
+  const characters = await getAllCharacters(80)
 
   return (
     <main>

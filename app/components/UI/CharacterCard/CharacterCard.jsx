@@ -1,17 +1,18 @@
 import Image from "next/image"
 
-import temporaryLogo from "@/public/vercel.svg"
+import './CharacterCard.scss'
+
+import temporaryLogo from "@/public/temp-avatar.jpeg"
 
 const CharacterCard = ({ name, avatar }) => {
   return (
-    <article>
-      <h3>{name}</h3>
-      <Image 
+    <article className="character-card">
+      <Image
+        className="character-card__avatar" 
         src={temporaryLogo}
         alt={name}
-        width={500}
-        height={500}
       />
+      <h3 className="character-card__heading">{name}</h3>
     </article>
   )
 }
