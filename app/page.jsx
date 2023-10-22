@@ -1,11 +1,11 @@
 import Sidebar from "./components/Sidebar/Sidebar"
-import MainPage from "./components/MainPage/MainPage"
+import CharactersPage from "./components/listings/CharactersPage/CharactersPage"
 
 const Home = () => {
   return (
     <>
       <Sidebar />
-      <MainPage />
+      <CharactersPage />
     </>
   )
 }

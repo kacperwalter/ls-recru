@@ -1,5 +1,5 @@
 import Sidebar from "@/app/components/Sidebar/Sidebar"
-import PlanetPage from "@/app/components/PlanetPage/PlanetPage"
+import PlanetPage from "@/app/components/details/PlanetPage/PlanetPage"
 
 import getPlanet from "@/app/utils/getPlanet"
 

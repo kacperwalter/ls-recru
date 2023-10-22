@@ -1,5 +1,5 @@
 import Sidebar from "@/app/components/Sidebar/Sidebar"
-import MainPage from "@/app/components/MainPage/MainPage"
+import MainPage from "@/app/components/listings/CharactersPage/CharactersPage"
 
 const CharactersMainPage = () => {
   return (

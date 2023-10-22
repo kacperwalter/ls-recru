@@ -1,5 +1,5 @@
 import ContentCard from "../ContentCard/ContentCard"
-import Listing from "../UI/Listing/Listing"
+import Listing from "../../UI/Listing/Listing"
 
 import getPlanet from "@/app/utils/getPlanet"
 

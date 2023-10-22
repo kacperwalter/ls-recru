@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
+import DetailsWrapper from '../../UI/DetailsWrapper/DetailsWrapper'
 
 import temporaryVehicle from "@/public/temp-vehicle.png"
 

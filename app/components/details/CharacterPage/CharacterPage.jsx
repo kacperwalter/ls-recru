@@ -6,7 +6,7 @@ import getVehicle from '@/app/utils/getVehicle'
 import parseStringToSlug from '@/app/utils/parseStringToSlug'
 import splitId from '@/app/utils/splitId'
 
-import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
+import DetailsWrapper from '../../UI/DetailsWrapper/DetailsWrapper'
 
 import './CharacterPage.scss'
 import temporaryAvatar from "@/public/temp-avatar.jpeg"

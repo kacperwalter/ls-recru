@@ -1,5 +1,5 @@
 import Sidebar from "@/app/components/Sidebar/Sidebar"
-import VehiclePage from "@/app/components/VehiclePage/VehiclePage"
+import VehiclePage from "@/app/components/details/VehiclePage/VehiclePage"
 
 import getVehicle from "@/app/utils/getVehicle"
 

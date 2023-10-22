@@ -1,5 +1,5 @@
 import ContentCard from "../ContentCard/ContentCard"
-import Listing from "../UI/Listing/Listing"
+import Listing from "../../UI/Listing/Listing"
 
 import getCharacter from "@/app/utils/getCharacter"
 
@@ -24,7 +24,7 @@ const getAllCharacters = async (characterCount) => {
   return allCharacters
 }
 
-const MainPage = async () => {
+const CharactersPage = async () => {
   const characters = await getAllCharacters(80)
 
   return (
@@ -41,4 +41,4 @@ const MainPage = async () => {
   )
 }
 
-export default MainPage
+export default CharactersPage

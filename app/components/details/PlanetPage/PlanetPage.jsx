@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
+import DetailsWrapper from '../../UI/DetailsWrapper/DetailsWrapper'
 
 import splitId from '@/app/utils/splitId'
 import getCharacter from '@/app/utils/getCharacter'

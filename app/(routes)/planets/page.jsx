@@ -1,5 +1,5 @@
 import Sidebar from "@/app/components/Sidebar/Sidebar"
-import PlanetsPage from "@/app/components/PlanetsPage/PlanetsPage"
+import PlanetsPage from "@/app/components/listings/PlanetsPage/PlanetsPage"
 
 const PlanetsMainPage = () => {
   return (
