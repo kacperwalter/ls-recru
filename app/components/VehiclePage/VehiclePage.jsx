@@ -12,7 +12,6 @@ import parseStringToSlug from '@/app/utils/parseStringToSlug'
 import './VehiclePage.scss'
 
 const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
-  console.log(pilots)
   const pilotsData = await Promise.all(pilots.map(pilot => getCharacter(splitId(pilot))))
 
   return (

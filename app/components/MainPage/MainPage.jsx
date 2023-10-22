@@ -11,9 +11,12 @@ const getAllCharacters = async (characterCount) => {
   const allCharacters = []
 
   for (let i = 1; i <= characterCount; i++) {
-    allCharacters.push(await getCharacter(i))
+    const character = await getCharacter(i)
+    if (character.detail !== 'Not found') {
+      allCharacters.push(character)
+    }
   }
-
+  
   allCharacters.sort((a, b) => {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
