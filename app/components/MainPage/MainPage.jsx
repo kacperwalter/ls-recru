@@ -22,7 +22,7 @@ const getAllCharacters = async (characterCount) => {
 }
 
 const MainPage = async () => {
-  const characters = await getAllCharacters(3)
+  const characters = await getAllCharacters(80)
 
   return (
     <main className="main-page">
