@@ -3,6 +3,8 @@ import Wrapper from "../UI/Wrapper/Wrapper"
 
 import getVehicle from "@/app/utils/getVehicle"
 
+import temporaryVehicle from "@/public/temp-vehicle.png"
+
 import './VehiclesPage.scss'
 
 const getAllVehicles = async (vehicleCount) => {
@@ -20,7 +22,6 @@ const getAllVehicles = async (vehicleCount) => {
 
 const VehiclesPage = async () => {
   const vehicles = await getAllVehicles(38)
-  console.log(vehicles)
 
   return (
     <main className="vehicles-page">
@@ -28,7 +29,8 @@ const VehiclesPage = async () => {
         <h1>Star Wars Vehicles</h1>
         <section>
           {vehicles.map((vehicle, index) => (
-            <ContentCard 
+            <ContentCard
+              image={temporaryVehicle} 
               key={index}
               id={index}
               data={vehicle}
