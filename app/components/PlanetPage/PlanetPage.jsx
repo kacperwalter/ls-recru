@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Wrapper from '../UI/Wrapper/Wrapper'
 
 import splitId from '@/app/utils/splitId'
 import getCharacter from '@/app/utils/getCharacter'
+import parseStringToSlug from '@/app/utils/parseStringToSlug'
 
 import './PlanetPage.scss'
 
@@ -23,7 +25,13 @@ const PlanetPage = async ({ data: { name, population, residents }}) => {
          <div>
           <p>Known residents: </p>
           <ul>
-            {residentsData.map((resident, index) => <li key={index}>{resident.name}</li>)}
+          {residentsData.map((resident, index) => (
+            <li key={index}>
+              <Link href={`/characters/${parseStringToSlug(resident.name)}?id=${splitId(resident.url)}`}>
+                {resident.name}
+              </Link>
+            </li>
+          ))}
           </ul>
          </div>
         )}
