@@ -1,4 +1,4 @@
-export const parseStringToSlug = (str) => {
+const parseStringToSlug = (str) => {
   if (!str) return '';
   const slug = str
     .toLowerCase()
@@ -6,3 +6,5 @@ export const parseStringToSlug = (str) => {
     .replace(/[^\w-]+/g, '');
   return slug;
 }
+
+export default parseStringToSlug

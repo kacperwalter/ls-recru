@@ -1,11 +1,6 @@
 import CharacterCard from "../UI/CharacterCard/CharacterCard"
 
-const getCharacter = async (characterID) => {
-  const baseUrl = 'https://swapi.dev/api/people/'
-  const response = await fetch(`${baseUrl}${characterID}`)
-  const data = await response.json()
-  return data
-}
+import getCharacter from "@/app/utils/getCharacter"
 
 const getAllCharacters = async (characterCount) => {
   const allCharacters = []
@@ -24,7 +19,7 @@ const getAllCharacters = async (characterCount) => {
 }
 
 const Main = async () => {
-  const characters = await getAllCharacters(80)
+  const characters = await getAllCharacters(1)
 
   return (
     <main>
@@ -33,6 +28,7 @@ const Main = async () => {
         {characters.map((character, index) => (
           <CharacterCard 
             key={index}
+            id={index}
             data={character}
           />
         ))}
