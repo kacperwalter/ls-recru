@@ -1,12 +1,9 @@
 import ContentCard from "../ContentCard/ContentCard"
-import Wrapper from "../UI/Wrapper/Wrapper"
+import Listing from "../UI/Listing/Listing"
 
 import getVehicle from "@/app/utils/getVehicle"
 
-import '../UI/Listing.scss'
-
 import temporaryVehicle from "@/public/temp-vehicle.png"
-
 
 const getAllVehicles = async (vehicleCount) => {
   const allVehicles = []
@@ -25,21 +22,16 @@ const VehiclesPage = async () => {
   const vehicles = await getAllVehicles(38)
 
   return (
-    <main className="listing">
-      <Wrapper>
-        <h1>Star Wars Vehicles</h1>
-        <section>
-          {vehicles.map((vehicle, index) => (
-            <ContentCard
-              image={temporaryVehicle} 
-              key={index}
-              id={index}
-              data={vehicle}
-            />
-          ))}
-        </section>
-      </Wrapper>
-    </main>
+    <Listing heading="Star Wars Vehicles">
+      {vehicles.map((vehicle, index) => (
+        <ContentCard
+          image={temporaryVehicle} 
+          key={index}
+          id={index}
+          data={vehicle}
+        />
+      ))}
+    </Listing>
   )
 }
 
