@@ -1,6 +1,8 @@
 import CharacterCard from "../CharacterCard/CharacterCard"
 import Wrapper from "../UI/Wrapper/Wrapper"
 
+import './MainPage.scss'
+
 import getCharacter from "@/app/utils/getCharacter"
 
 const getAllCharacters = async (characterCount) => {
@@ -19,11 +21,11 @@ const getAllCharacters = async (characterCount) => {
   return allCharacters
 }
 
-const Main = async () => {
+const MainPage = async () => {
   const characters = await getAllCharacters(3)
 
   return (
-    <main>
+    <main className="main-page">
       <Wrapper>
         <h1>Star Wars Characters</h1>
         <section>
@@ -40,4 +42,4 @@ const Main = async () => {
   )
 }
 
-export default Main
+export default MainPage
