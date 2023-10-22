@@ -1,7 +1,7 @@
 import Sidebar from "@/app/components/Sidebar/Sidebar"
 
 const CharactersMainPage = ({ params }) => {
-  console.log(params)
+  // console.log(params)
   
   return (
     <>

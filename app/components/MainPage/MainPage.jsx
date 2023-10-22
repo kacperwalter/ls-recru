@@ -19,7 +19,7 @@ const getAllCharacters = async (characterCount) => {
 }
 
 const Main = async () => {
-  const characters = await getAllCharacters(1)
+  const characters = await getAllCharacters(3)
 
   return (
     <main>
