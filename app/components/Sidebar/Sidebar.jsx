@@ -10,9 +10,9 @@ const Sidebar = () => {
 
   return (
     <aside className="sidebar">
-      <Link className={`sidebar__link ${pathname === '/' ? 'sidebar__link--active' : ''}`} href="/">Characters</Link>
-      <Link className={`sidebar__link ${pathname === '/planets' ? 'sidebar__link--active' : ''}`} href="/planets">Planets</Link>
-      <Link className={`sidebar__link ${pathname === '/vehicles' ? 'sidebar__link--active' : ''}`} href="/vehicles">Vehicles</Link>
+      <Link className={`sidebar__link ${pathname.startsWith('/characters') || pathname === '/' ? 'sidebar__link--active' : ''}`} href="/">Characters</Link>
+      <Link className={`sidebar__link ${pathname.startsWith('/planets') ? 'sidebar__link--active' : ''}`} href="/planets">Planets</Link>
+      <Link className={`sidebar__link ${pathname.startsWith('/vehicles') ? 'sidebar__link--active' : ''}`} href="/vehicles">Vehicles</Link>
     </aside>
   )
 }

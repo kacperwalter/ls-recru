@@ -10,11 +10,11 @@ const CardLink = ({data}) => {
 
   return (
     <>
-      {pathname === '/' && (
+      {pathname == '/' || pathname.startsWith('/characters') ? (
         <Link href={{ pathname: `/characters/${parseStringToSlug(data.name)}`, query: { id: data.id } }}>
           Read more
         </Link>
-      )}
+      ): null}
   
       {pathname === '/planets' && (
         <Link href={{ pathname: `/planets/${parseStringToSlug(data.name)}`, query: { id: data.id } }}>
