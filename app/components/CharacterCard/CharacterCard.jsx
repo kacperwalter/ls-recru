@@ -15,11 +15,13 @@ const CharacterCard = ({ data }) => {
         src={temporaryAvatar}
         alt={data.name}
       />
-      <h3 className="character-card__heading">{data.name}</h3>
-      <Link href={{
-        pathname: `/characters/${parseStringToSlug(data.name)}`,
-        query: { id: data.id }
-      }}>More about this character</Link>
+      <div className="character-card__info">
+        <h3 className="character-card__heading">{data.name}</h3>
+        <Link href={{
+          pathname: `/characters/${parseStringToSlug(data.name)}`,
+          query: { id: data.id }
+        }}>Read more</Link>
+      </div>
     </article>
   )
 }
