@@ -10,28 +10,26 @@ const CardLink = ({data}) => {
 
   return (
     <>
-    {pathname === '/' && 
-      <Link href={{
-        pathname: `/characters/${parseStringToSlug(data.name)}`,
-        query: { id: data.id }
-      }}>Read more</Link>
-    }
-
-    {pathname === '/planets' && 
-      <Link href={{
-        pathname: `/planets/${parseStringToSlug(data.name)}`,
-        query: { id: data.id }
-      }}>Read more</Link>
-    }
-
-    {pathname === '/vehicles' && 
-      <Link href={{
-        pathname: `/vehicles/${parseStringToSlug(data.name)}`,
-        query: { id: data.id }
-      }}>Read more</Link>
-    }
+      {pathname === '/' && (
+        <Link href={{ pathname: `/characters/${parseStringToSlug(data.name)}`, query: { id: data.id } }}>
+          Read more
+        </Link>
+      )}
+  
+      {pathname === '/planets' && (
+        <Link href={{ pathname: `/planets/${parseStringToSlug(data.name)}`, query: { id: data.id } }}>
+          Read more
+        </Link>
+      )}
+  
+      {pathname === '/vehicles' && (
+        <Link href={{ pathname: `/vehicles/${parseStringToSlug(data.name)}`, query: { id: data.id } }}>
+          Read more
+        </Link>
+      )}
     </>
-  )
+  );
+  
 }
 
 export default CardLink

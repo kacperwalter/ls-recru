@@ -2,16 +2,18 @@ import Image from 'next/image'
 
 import Wrapper from '../UI/Wrapper/Wrapper'
 
-import temporaryAvatar from "@/public/temp-avatar.jpeg"
+import './PlanetPage.scss'
+
+import temporaryPlanet from "@/public/temp-planet.webp"
 
 const PlanetPage = ({ data: { name, population, residents }}) => {
   return (
     <main className="planet-page">
       <Wrapper>
-      <Image src={temporaryAvatar} alt={name} />
-        <h1>{name}</h1>
-        <p>{population}</p>
-        <p>{residents}</p>
+        <Image src={temporaryPlanet} alt={name} />
+        <h1>Planet name: {name}</h1>
+        <p>Population: {population}</p>
+        <p>Known residents: {residents}</p>
       </Wrapper>
     </main>
   )

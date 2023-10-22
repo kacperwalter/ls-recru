@@ -5,7 +5,7 @@ const PlanetsMainPage = () => {
   return (
     <>
       <Sidebar />
-      <PlanetsPage />
+      <PlanetsPage /> 
     </>
   )
 }
