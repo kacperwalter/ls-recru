@@ -6,7 +6,7 @@ import getVehicle from '@/app/utils/getVehicle'
 import parseStringToSlug from '@/app/utils/parseStringToSlug'
 import splitId from '@/app/utils/splitId'
 
-import Wrapper from '../UI/Wrapper/Wrapper'
+import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
 
 import './CharacterPage.scss'
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
@@ -19,7 +19,7 @@ const CharacterPage = async ({ data: { name, homeworld, vehicles, gender } }) =>
 
   return (
     <main className="character-page">
-      <Wrapper>
+      <DetailsWrapper>
         <Image src={temporaryAvatar} alt={name} />
         <h1>{name}</h1>
         <p>Planet origin: <Link href={`/planets/${parseStringToSlug(planet.name)}?id=${planetId}`}>{planet.name}</Link></p>
@@ -39,7 +39,7 @@ const CharacterPage = async ({ data: { name, homeworld, vehicles, gender } }) =>
             </ul>
           </section>
         )}
-      </Wrapper>
+      </DetailsWrapper>
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Wrapper from '../UI/Wrapper/Wrapper'
+import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
 
 import temporaryVehicle from "@/public/temp-vehicle.png"
 
@@ -16,7 +16,7 @@ const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
 
   return (
     <main className="vehicle-page">
-      <Wrapper>
+      <DetailsWrapper>
         <Image className="vehicle-page__image" src={temporaryVehicle} alt="vehicle" />
         <h1>Vehicle name: {name}</h1>
         <p>Vehicle class: {vehicle_class}</p>
@@ -35,7 +35,7 @@ const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
             </ul>
          </section>
         )}
-      </Wrapper>
+      </DetailsWrapper>
     </main>
   )
 }

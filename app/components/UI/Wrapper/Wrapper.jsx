@@ -1,8 +1,8 @@
 import './Wrapper.scss'
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ children, additionalClass }) => {
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${additionalClass ? additionalClass : ''}`}>
       {children}
     </div>
   )

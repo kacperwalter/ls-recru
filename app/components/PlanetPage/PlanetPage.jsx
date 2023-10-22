@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Wrapper from '../UI/Wrapper/Wrapper'
+import DetailsWrapper from '../UI/DetailsWrapper/DetailsWrapper'
 
 import splitId from '@/app/utils/splitId'
 import getCharacter from '@/app/utils/getCharacter'
@@ -16,8 +16,8 @@ const PlanetPage = async ({ data: { name, population, residents }}) => {
 
   return (
     <main className="planet-page">
-      <Wrapper>
-        <Image src={temporaryPlanet} alt={name} />
+      <DetailsWrapper>
+        <Image src={temporaryPlanet} alt={name} className='planet-page__image'/>
         <h1>Planet name: {name}</h1>
         <p>Population: {population}</p>
 
@@ -35,7 +35,7 @@ const PlanetPage = async ({ data: { name, population, residents }}) => {
           </ul>
          </section>
         )}
-      </Wrapper>
+      </DetailsWrapper>
     </main>
   )
 }
