@@ -3,9 +3,10 @@ import Wrapper from "../UI/Wrapper/Wrapper"
 
 import getVehicle from "@/app/utils/getVehicle"
 
+import '../UI/Listing.scss'
+
 import temporaryVehicle from "@/public/temp-vehicle.png"
 
-import './VehiclesPage.scss'
 
 const getAllVehicles = async (vehicleCount) => {
   const allVehicles = []
@@ -24,7 +25,7 @@ const VehiclesPage = async () => {
   const vehicles = await getAllVehicles(38)
 
   return (
-    <main className="vehicles-page">
+    <main className="listing">
       <Wrapper>
         <h1>Star Wars Vehicles</h1>
         <section>

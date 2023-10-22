@@ -5,7 +5,7 @@ import getPlanet from "@/app/utils/getPlanet"
 
 import temporaryPlanet from "@/public/temp-planet.webp"
 
-import './PlanetsPage.scss'
+import '../UI/Listing.scss'
 
 const getAllPlanets = async (planetCount) => {
   const allPlanets = []
@@ -21,7 +21,7 @@ const PlanetsPage = async () => {
   const planets = await getAllPlanets(60)
 
   return (
-    <main className="planets-page">
+    <main className="listing">
       <Wrapper>
         <h1>Star Wars Planets</h1>
         <section>

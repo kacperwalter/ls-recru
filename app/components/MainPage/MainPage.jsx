@@ -1,7 +1,7 @@
 import ContentCard from "../ContentCard/ContentCard"
 import Wrapper from "../UI/Wrapper/Wrapper"
 
-import './MainPage.scss'
+import '../UI/Listing.scss'
 
 import getCharacter from "@/app/utils/getCharacter"
 
@@ -30,7 +30,7 @@ const MainPage = async () => {
   const characters = await getAllCharacters(80)
 
   return (
-    <main className="main-page">
+    <main className="listing">
       <Wrapper>
         <h1>Star Wars Characters</h1>
         <section>
