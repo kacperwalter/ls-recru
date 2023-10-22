@@ -5,7 +5,7 @@ import Link from "next/link"
 
 import parseStringToSlug from "@/app/utils/parseStringToSlug"
 
-const CharacterLink = ({data}) => {
+const CardLink = ({data}) => {
   const pathname = usePathname()
 
   return (
@@ -34,4 +34,4 @@ const CharacterLink = ({data}) => {
   )
 }
 
-export default CharacterLink
+export default CardLink

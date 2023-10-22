@@ -1,4 +1,4 @@
-import CharacterCard from "../CharacterCard/CharacterCard"
+import ContentCard from "../ContentCard/ContentCard"
 import Wrapper from "../UI/Wrapper/Wrapper"
 
 import './MainPage.scss'
@@ -30,7 +30,7 @@ const MainPage = async () => {
         <h1>Star Wars Characters</h1>
         <section>
           {characters.map((character, index) => (
-            <CharacterCard 
+            <ContentCard 
               key={index}
               id={index}
               data={character}

@@ -1,4 +1,4 @@
-import CharacterCard from "../CharacterCard/CharacterCard"
+import ContentCard from "../ContentCard/ContentCard"
 import Wrapper from "../UI/Wrapper/Wrapper"
 
 import getPlanet from "@/app/utils/getPlanet"
@@ -25,7 +25,7 @@ const PlanetsPage = async () => {
         <h1>Star Wars Planets</h1>
         <section>
           {planets.map((planet, index) => (
-            <CharacterCard 
+            <ContentCard 
               key={index}
               id={index}
               data={planet}

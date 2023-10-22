@@ -1,4 +1,4 @@
-.character-card {
+.content-card {
   width: 100%;
   border-bottom: 1px solid var(--color-white);
   display: flex;
@@ -16,7 +16,7 @@
     font-size: var(--font-size-h3);
   }
 
-  &__avatar {
+  &__image {
     width: 10rem;
   }
 }
