@@ -3,14 +3,12 @@ import Image from "next/image"
 import './ContentCard.scss'
 import CardLink from "./CardLink"
 
-import temporaryAvatar from "@/public/temp-avatar.jpeg"
-
-const ContentCard = ({ data }) => {
+const ContentCard = ({ data, image }) => {
   return (
     <article className="content-card">
       <Image
         className="content-card__image" 
-        src={temporaryAvatar}
+        src={image}
         alt={data.name}
       />
       <div className="content-card__info">

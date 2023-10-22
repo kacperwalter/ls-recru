@@ -3,6 +3,8 @@ import Wrapper from "../UI/Wrapper/Wrapper"
 
 import getPlanet from "@/app/utils/getPlanet"
 
+import temporaryPlanet from "@/public/temp-planet.webp"
+
 import './PlanetsPage.scss'
 
 const getAllPlanets = async (planetCount) => {
@@ -17,7 +19,6 @@ const getAllPlanets = async (planetCount) => {
 
 const PlanetsPage = async () => {
   const planets = await getAllPlanets(60)
-  // console.log(planets)
 
   return (
     <main className="planets-page">
@@ -25,7 +26,8 @@ const PlanetsPage = async () => {
         <h1>Star Wars Planets</h1>
         <section>
           {planets.map((planet, index) => (
-            <ContentCard 
+            <ContentCard
+              image={temporaryPlanet}
               key={index}
               id={index}
               data={planet}

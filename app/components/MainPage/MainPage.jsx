@@ -5,6 +5,8 @@ import './MainPage.scss'
 
 import getCharacter from "@/app/utils/getCharacter"
 
+import temporaryAvatar from "@/public/temp-avatar.jpeg"
+
 const getAllCharacters = async (characterCount) => {
   const allCharacters = []
 
@@ -30,7 +32,8 @@ const MainPage = async () => {
         <h1>Star Wars Characters</h1>
         <section>
           {characters.map((character, index) => (
-            <ContentCard 
+            <ContentCard
+              image={temporaryAvatar}
               key={index}
               id={index}
               data={character}
