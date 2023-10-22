@@ -1,9 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
 
 import './CharacterCard.scss'
-
-import parseStringToSlug from '@/app/utils/parseStringToSlug'
+import CharacterLink from "./CharacterLink"
 
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
 
@@ -17,10 +15,7 @@ const CharacterCard = ({ data }) => {
       />
       <div className="character-card__info">
         <h3 className="character-card__heading">{data.name}</h3>
-        <Link href={{
-          pathname: `/characters/${parseStringToSlug(data.name)}`,
-          query: { id: data.id }
-        }}>Read more</Link>
+        <CharacterLink data={data}/>
       </div>
     </article>
   )

@@ -1,21 +1,36 @@
 import CharacterCard from "../CharacterCard/CharacterCard"
 import Wrapper from "../UI/Wrapper/Wrapper"
 
+import getPlanet from "@/app/utils/getPlanet"
+
 import './PlanetsPage.scss'
 
-const PlanetsPage = () => {
+const getAllPlanets = async (planetCount) => {
+  const allPlanets = []
+
+  for (let i = 1; i <= planetCount; i++) {
+    allPlanets.push(await getPlanet(i))
+  }
+
+  return allPlanets
+}
+
+const PlanetsPage = async () => {
+  const planets = await getAllPlanets(10)
+  // console.log(planets)
+
   return (
     <main className="planets-page">
       <Wrapper>
         <h1>Star Wars Planets</h1>
         <section>
-          {/* {characters.map((character, index) => (
+          {planets.map((planet, index) => (
             <CharacterCard 
               key={index}
               id={index}
-              data={character}
+              data={planet}
             />
-          ))} */}
+          ))}
         </section>
       </Wrapper>
     </main>
