@@ -1,0 +1,19 @@
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  border-right: 1px solid var(--color-white);
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  &__link {
+    width: fit-content;
+    font-weight: 300;
+
+    &--active {
+      font-weight: bold;
+    }
+  }
+}
