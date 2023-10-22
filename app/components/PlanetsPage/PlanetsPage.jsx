@@ -16,7 +16,7 @@ const getAllPlanets = async (planetCount) => {
 }
 
 const PlanetsPage = async () => {
-  const planets = await getAllPlanets(10)
+  const planets = await getAllPlanets(60)
   // console.log(planets)
 
   return (
