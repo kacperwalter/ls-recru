@@ -1,4 +1,5 @@
-import CharacterCard from "../UI/CharacterCard/CharacterCard"
+import CharacterCard from "../CharacterCard/CharacterCard"
+import Wrapper from "../UI/Wrapper/Wrapper"
 
 import getCharacter from "@/app/utils/getCharacter"
 
@@ -23,16 +24,18 @@ const Main = async () => {
 
   return (
     <main>
-      <h1>Star Wars Characters</h1>
-      <section>
-        {characters.map((character, index) => (
-          <CharacterCard 
-            key={index}
-            id={index}
-            data={character}
-          />
-        ))}
-      </section>
+      <Wrapper>
+        <h1>Star Wars Characters</h1>
+        <section>
+          {characters.map((character, index) => (
+            <CharacterCard 
+              key={index}
+              id={index}
+              data={character}
+            />
+          ))}
+        </section>
+      </Wrapper>
     </main>
   )
 }
