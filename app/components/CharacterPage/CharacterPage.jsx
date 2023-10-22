@@ -26,18 +26,18 @@ const CharacterPage = async ({ data: { name, homeworld, vehicles, gender } }) =>
         <p>Gender: {gender}</p>
 
         {vehicles.length > 0 && (
-          <div>
-            <p>Connected vehicles: </p>
+          <section>
+            <h2>Connected vehicles: </h2>
             <ul>
-            {vehiclesData.map((vehicle, index) => (
-              <li key={index}>
-                <Link href={`/vehicles/${parseStringToSlug(vehicle.name)}?id=${splitId(vehicle.url)}`}>
-                  {vehicle.name}
-                </Link>
-              </li>
-            ))}
+              {vehiclesData.map((vehicle, index) => (
+                <li key={index}>
+                  <Link href={`/vehicles/${parseStringToSlug(vehicle.name)}?id=${splitId(vehicle.url)}`}>
+                    {vehicle.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </section>
         )}
       </Wrapper>
     </main>

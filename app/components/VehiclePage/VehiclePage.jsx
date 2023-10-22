@@ -22,8 +22,8 @@ const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
         <p>Vehicle class: {vehicle_class}</p>
 
         {pilots.length > 0 && (
-          <div>
-            <p>Known pilots: </p>
+          <section>
+            <h2>Known pilots: </h2>
             <ul>
               {pilotsData.map((pilot, index) => (
                 <li key={index}>
@@ -33,7 +33,7 @@ const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
                 </li>)
               )}
             </ul>
-         </div>
+         </section>
         )}
       </Wrapper>
     </main>

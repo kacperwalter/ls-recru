@@ -22,18 +22,18 @@ const PlanetPage = async ({ data: { name, population, residents }}) => {
         <p>Population: {population}</p>
 
         {residents.length > 0 && (
-         <div>
-          <p>Known residents: </p>
+         <section>
+          <h2>Known residents: </h2>
           <ul>
-          {residentsData.map((resident, index) => (
-            <li key={index}>
-              <Link href={`/characters/${parseStringToSlug(resident.name)}?id=${splitId(resident.url)}`}>
-                {resident.name}
-              </Link>
-            </li>
-          ))}
+            {residentsData.map((resident, index) => (
+              <li key={index}>
+                <Link href={`/characters/${parseStringToSlug(resident.name)}?id=${splitId(resident.url)}`}>
+                  {resident.name}
+                </Link>
+              </li>
+            ))}
           </ul>
-         </div>
+         </section>
         )}
       </Wrapper>
     </main>
