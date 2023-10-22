@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import Wrapper from '../UI/Wrapper/Wrapper'
 
@@ -6,6 +7,7 @@ import temporaryVehicle from "@/public/temp-vehicle.png"
 
 import splitId from '@/app/utils/splitId'
 import getCharacter from '@/app/utils/getCharacter'
+import parseStringToSlug from '@/app/utils/parseStringToSlug'
 
 import './VehiclePage.scss'
 
@@ -24,7 +26,13 @@ const VehiclePage = async ({ data: { name, vehicle_class, pilots } }) => {
           <div>
             <p>Known pilots: </p>
             <ul>
-              {pilotsData.map((pilot, index) => <li key={index}>{pilot.name}</li>)}
+              {pilotsData.map((pilot, index) => (
+                <li key={index}>
+                  <Link href={`/characters/${parseStringToSlug(pilot.name)}?id=${splitId(pilot.url)}`}>
+                    {pilot.name}
+                  </Link>
+                </li>)
+              )}
             </ul>
          </div>
         )}
