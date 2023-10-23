@@ -14,5 +14,4 @@ describe("parseStringToSlug", () => {
     const output = parseStringToSlug(input)
     expect(output).toEqual(expectedOutput)
   })
-  // would add more test cases like that
 })
