@@ -9,4 +9,5 @@ const parseStringToSlug = (str) => {
   return slug;
 }
 
+module.exports = parseStringToSlug
 export default parseStringToSlug

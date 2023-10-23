@@ -1,4 +1,4 @@
-import parseStringToSlug from "../parseStringToSlug"
+const parseStringToSlug = require('../parseStringToSlug')
 
 describe("parseStringToSlug", () => {
   it('should convert a string to a slug', () => {
