@@ -3,7 +3,9 @@ const parseStringToSlug = (str) => {
   const slug = str
     .toLowerCase()
     .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '');
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s]+/g, '-')
+    .replace(/^-+|-+$/g, '');
   return slug;
 }
 
