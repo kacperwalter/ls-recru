@@ -10,9 +10,7 @@ const getAllVehicles = async (vehicleCount) => {
 
   for (let i = 1; i <= vehicleCount; i++) {
     const vehicle = await getVehicle(i)
-    if (vehicle.detail !== 'Not found') {
-      allVehicles.push(vehicle)
-    }
+    vehicle.detail !== 'Not found' && allVehicles.push(vehicle)
   }
 
   return allVehicles

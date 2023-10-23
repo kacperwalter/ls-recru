@@ -1,8 +1,9 @@
-const splitId = (url) => {
+const splitId = url => {
   // splits ID from URL
   const parts = url.split('/')
-  const id = parts[parts.length - 2]
+  const id = parts[parts.length - (parts[parts.length - 1] === '' ? 2 : 1)]
   return id
 }
 
+module.exports = splitId
 export default splitId
