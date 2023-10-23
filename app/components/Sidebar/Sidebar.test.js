@@ -22,16 +22,16 @@ describe('Sidebar', () => {
     expect(getByText('Characters')).toBeTruthy()
     expect(getByText('Planets')).toBeTruthy()
     expect(getByText('Vehicles')).toBeTruthy()
-  });
+  })
 
   it('should mark "Characters" link as active when on the characters page', () => {
-    const { getByText } = render(<Sidebar />);
+    const { getByText } = render(<Sidebar />)
     
     const charactersLink = getByText('Characters')
     const classList = charactersLink.className.split(' ')
 
     expect(classList).toContain('sidebar__link--active')
-  });
+  })
 
   it('should not mark "Planets" and "Vehicles" links as active on the characters page', () => {
     const { getByText } = render(<Sidebar />)
@@ -41,5 +41,5 @@ describe('Sidebar', () => {
 
     expect(planetsClassList).not.toContain('sidebar__link--active')
     expect(vehiclesClassList).not.toContain('sidebar__link--active')
-  });
-});
+  })
+})
