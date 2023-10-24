@@ -1,7 +1,7 @@
 // import Sidebar from "./components/Sidebar/Sidebar"
 // import CharactersPage from "./components/listings/CharactersPage/CharactersPage"
 
-const Home = () => {
+const Index = () => {
   return (
     <>
       {/* <Sidebar />
@@ -10,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Index
