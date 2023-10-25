@@ -1,16 +1,14 @@
-import Wrapper from "@/app/components/UI/Wrapper/Wrapper"
+import Wrapper from '@/app/common/components/atoms/Wrapper/Wrapper'
+import Heading from '@/app/common/components/atoms/Heading/Heading'
 
-// import './Listing.scss'
+import './Listing.scss'
 
 const Listing = ({ children, heading }) => {
   return (
     <main className="listing">
       <Wrapper>
-        {/* TODO */}
-        <h1>{heading}</h1>
-        <section>
-          {children}
-        </section>
+        <Heading type="h1" text={heading} />
+        {children}
       </Wrapper>
     </main>
   )
