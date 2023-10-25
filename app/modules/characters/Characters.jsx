@@ -1,11 +1,12 @@
-import getAllCharacters from "@/app/services/getAllCharacters"
 import Listing from "@/app/common/components/organisms/Listing/Listing"
 import Card from "@/app/common/components/organisms/Card/Card"
+
+import getAllElements from "@/app/services/getAllElements"
 
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
 
 const Characters = async () => {
-  const characters = await getAllCharacters(10)
+  const characters = await getAllElements("characters", 10)
 
   return (
     <Listing 

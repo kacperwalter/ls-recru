@@ -27,3 +27,5 @@ const getAllElements = async (type, count) => {
 
   return allData
 }
+
+export default getAllElements

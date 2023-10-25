@@ -1,11 +1,12 @@
-import getAllVehicles from "@/app/services/getAllVehicles";
 import Listing from "@/app/common/components/organisms/Listing/Listing"
 import Card from "@/app/common/components/organisms/Card/Card"
+
+import getAllElements from "@/app/services/getAllElements"
 
 import temporaryVehicleImage from "@/public/temp-vehicle.png"
 
 const Vehicles = async () => {
-  const vehicles = await getAllVehicles(38)
+  const vehicles = await getAllElements("vehicles", 38)
 
   return (
     <Listing 
