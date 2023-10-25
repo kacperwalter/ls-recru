@@ -8,7 +8,11 @@ const Characters = async () => {
   const characters = await getAllCharacters(10)
 
   return (
-    <Listing heading="Star Wars Characters">
+    <Listing 
+      heading="Star Wars Characters" 
+      headingType="h1"
+      caption="List of Star Wars Characters"
+    >
       {characters.map((character, index) => (
         <Card
           image={temporaryAvatar}
