@@ -1,3 +1,5 @@
+import getCharacter from './getCharacter'
+
 const getAllCharacters = async characterCount => {
   const allCharacters = []
 
