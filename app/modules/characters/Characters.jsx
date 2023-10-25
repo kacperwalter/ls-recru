@@ -1,7 +1,9 @@
 const Characters = () => {
   //getallcharacters and display them in card component
   return (
-    <div>Characters</div>
+    <div>
+      <h1>Characters</h1>
+    </div>
   )
 }
 
