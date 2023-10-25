@@ -14,7 +14,7 @@ const Card = ({ data, image }) => {
       />
       <div className="card__info">
         <h3 className="card__heading">{data.name}</h3>
-        <CardLink data={data}/>
+        <CardLink data={data} />
       </div>
     </article>
   )

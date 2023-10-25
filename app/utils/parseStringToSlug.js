@@ -1,5 +1,5 @@
-const parseStringToSlug = (str) => {
-  if (!str) return ''
+const parseStringToSlug = str => {
+  !str && ''
   const slug = str
     .toLowerCase()
     .replace(/ /g, '-')

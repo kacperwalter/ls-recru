@@ -3,7 +3,7 @@
  */
 
 import { render } from '@testing-library/react'
-import Sidebar from './Sidebar'
+import Sidebar from '../Sidebar'
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/characters'),
