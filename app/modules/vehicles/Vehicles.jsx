@@ -6,7 +6,8 @@ import getAllElements from "@/app/services/getAllElements"
 import temporaryVehicleImage from "@/public/temp-vehicle.png"
 
 const Vehicles = async () => {
-  const vehicles = await getAllElements("vehicles", 38)
+  const vehicles = await getAllElements("vehicles", 10)
+  console.log(vehicles)
 
   return (
     <Listing 
