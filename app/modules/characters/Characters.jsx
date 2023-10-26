@@ -6,7 +6,7 @@ import getAllElements from "@/app/services/getAllElements"
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
 
 const Characters = async () => {
-  const characters = await getAllElements("characters", 10)
+  const characters = await getAllElements("characters", 80)
 
   return (
     <Listing 
