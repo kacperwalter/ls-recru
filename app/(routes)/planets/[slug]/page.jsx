@@ -1,17 +1,13 @@
-import Sidebar from "@/app/components/Sidebar/Sidebar"
-import PlanetPage from "@/app/components/details/PlanetPage/PlanetPage"
+import Sidebar from "@/app/common/components/organisms/Sidebar/Sidebar"
+import Planet from "@/app/modules/planet/Planet"
 
-import getPlanet from "@/app/utils/getPlanet"
-
-const Planet = async ({ searchParams }) => {
-  const planet = await getPlanet(searchParams.id)
-
+const Index = ({ searchParams }) => {
   return (
     <>
       <Sidebar />
-      <PlanetPage data={planet}/>
+      <Planet planetId={searchParams.id} />
     </>
   )
 }
 
-export default Planet
+export default Index

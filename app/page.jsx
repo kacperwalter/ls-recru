@@ -1,13 +1,13 @@
-import Sidebar from "./components/Sidebar/Sidebar"
-import CharactersPage from "./components/listings/CharactersPage/CharactersPage"
+import Sidebar from "@/app/common/components/organisms/Sidebar/Sidebar"
+import Characters from "@/app/modules/characters/Characters"
 
-const Home = () => {
+const Index = () => {
   return (
     <>
       <Sidebar />
-      <CharactersPage />
+      <Characters />
     </>
   )
 }
 
-export default Home
+export default Index

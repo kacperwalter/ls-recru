@@ -1,13 +1,13 @@
-import Sidebar from "@/app/components/Sidebar/Sidebar"
-import PlanetsPage from "@/app/components/listings/PlanetsPage/PlanetsPage"
+import Sidebar from "@/app/common/components/organisms/Sidebar/Sidebar"
+import Planets from "@/app/modules/planets/Planets"
 
-const PlanetsMainPage = () => {
+const Index = () => {
   return (
     <>
       <Sidebar />
-      <PlanetsPage /> 
+      <Planets />
     </>
   )
 }
 
-export default PlanetsMainPage
+export default Index

@@ -1,13 +1,13 @@
-import Sidebar from "@/app/components/Sidebar/Sidebar"
-import VehiclesPage from "@/app/components/listings/VehiclesPage/VehiclesPage"
+import Sidebar from "@/app/common/components/organisms/Sidebar/Sidebar"
+import Vehicles from "@/app/modules/vehicles/Vehicles"
 
-const VehiclesMainPage = () => {
+const Index = () => {
   return (
     <>
       <Sidebar />
-      <VehiclesPage />
+      <Vehicles />
     </>
   )
 }
 
-export default VehiclesMainPage
+export default Index

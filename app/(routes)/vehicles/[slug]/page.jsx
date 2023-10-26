@@ -1,17 +1,13 @@
-import Sidebar from "@/app/components/Sidebar/Sidebar"
-import VehiclePage from "@/app/components/details/VehiclePage/VehiclePage"
+import Sidebar from "@/app/common/components/organisms/Sidebar/Sidebar"
+import Vehicle from "@/app/modules/vehicle/Vehicle"
 
-import getVehicle from "@/app/utils/getVehicle"
-
-const Vehicle = async ({ searchParams }) => {
-  const vehicle = await getVehicle(searchParams.id)
-
+const Index = ({ searchParams }) => {
   return (
     <>
       <Sidebar />
-      <VehiclePage data={vehicle}/>
+      <Vehicle vehicleId={searchParams.id} />
     </>
   )
 }
 
-export default Vehicle
+export default Index
