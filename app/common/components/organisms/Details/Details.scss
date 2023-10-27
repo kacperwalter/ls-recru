@@ -1,0 +1,18 @@
+.details {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__image {
+    max-width: 50rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 1rem;
+  }
+}
