@@ -25,8 +25,8 @@ const Character = async ({ characterId }) => {
       <p>Gender: {character.gender}</p>
 
       {vehicles.length > 0 && (
-          <LinkedElements elements={vehicles} heading="Connected vehicles:" type="vehicles" />
-        )}
+        <LinkedElements elements={vehicles} heading="Connected vehicles:" type="vehicles" />
+      )}
     </main>
   )
 }
