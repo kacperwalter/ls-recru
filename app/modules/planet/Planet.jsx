@@ -6,7 +6,7 @@ import splitId from "@/app/utils/splitId"
 
 import LinkedElements from "@/app/common/components/organisms/LinkedElements/LinkedElements"
 import Details from "@/app/common/components/organisms/Details/Details"
-import Paragraph from "@/app/common/components/atoms/Paragraph/Paragraph"
+import RichText from "@/app/common/components/atoms/RichText/RichText"
 
 import temporaryPlanetImage from "@/public/temp-planet.webp"
 
@@ -20,7 +20,7 @@ const Planet = async ({ planetId }) => {
       imageAlt={planet.name}
       heading={planet.name}
     >
-      <Paragraph>Population: {planet.population}</Paragraph>
+      <RichText>Population: {planet.population}</RichText>
 
       {residents.length > 0 && (
         <LinkedElements elements={residents} heading="Known residents:" type="characters" />

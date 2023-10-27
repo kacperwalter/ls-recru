@@ -4,7 +4,7 @@ import splitId from "@/app/utils/splitId"
 
 import LinkedElements from "@/app/common/components/organisms/LinkedElements/LinkedElements"
 import Details from "@/app/common/components/organisms/Details/Details"
-import Paragraph from "@/app/common/components/atoms/Paragraph/Paragraph"
+import RichText from "@/app/common/components/atoms/RichText/RichText"
 
 import temporaryVehicleImage from "@/public/temp-vehicle.png"
 
@@ -18,7 +18,7 @@ const Vehicle = async ({ vehicleId }) => {
       imageAlt={vehicle.name}
       heading={vehicle.name}
     >
-      <Paragraph>Vehicle class: {vehicle.vehicle_class}</Paragraph>
+      <RichText>Vehicle class: {vehicle.vehicle_class}</RichText>
 
       {pilots.length > 0 && (
         <LinkedElements elements={pilots} heading="Known pilots:" type="characters" />
