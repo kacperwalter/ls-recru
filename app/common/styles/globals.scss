@@ -5,18 +5,6 @@
   -webkit-text-fill-color: currentcolor;
 }
 
-:root {
-  --color-dark: #121212;
-  --color-white: white;
-
-  --font-size-h3: 3rem;
-}
-
-html {
-  font-size: 62.5%;
-  --cursor-color: white;
-}
-
 body {
   font-size: 1.6rem;
   background-color: var(--color-dark);
