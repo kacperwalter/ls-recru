@@ -12,7 +12,7 @@ In this repo, I meet your expectations and aim to demonstrate my skills and know
 But not here. This project focused on delivering logic, not fancy styling. For fancy styling look for [Netguru website](https://www.netguru.com/) - that's the best showcase of my CSS (Sass) abilities. 
 
 ## What I could improve in this solution
-There are always things to do better or improve. It's the same with this project - listed these things in [Issues](https://github.com/kacperwalter/typical-recru-project/issues) tab.
+There are always things to do better or improve. It's the same with this project - list of these things is in [Issues](https://github.com/kacperwalter/typical-recru-project/issues) tab.
 
 ## Project requirements
 There will be prepared project reqs
