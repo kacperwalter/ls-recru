@@ -1,0 +1,9 @@
+.linked-elements {
+  display: grid;
+  gap: 1rem;
+
+  &__list {
+    display: grid;
+    gap: 0.8rem;
+  }
+}

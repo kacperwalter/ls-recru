@@ -2,6 +2,10 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 
+  .rich-text:first-child {
+    font-weight: 100;
+  }
+
   .wrapper {
     display: grid;
     gap: 2rem;
@@ -13,6 +17,6 @@
 
   &__content {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
   }
 }

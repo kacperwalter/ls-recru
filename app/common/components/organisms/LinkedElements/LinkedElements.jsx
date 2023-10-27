@@ -5,11 +5,13 @@ import splitId from "@/app/utils/splitId"
 
 import Heading from "@/app/common/components/atoms/Heading/Heading"
 
+import "./LinkedElements.scss"
+
 const LinkedElements = ({ elements, heading, type }) => {
   return (
     <section className="linked-elements">
-      <Heading type="h2" text={heading} />
-      <ul>
+      <Heading type="h3" text={heading} />
+      <ul className="linked-elements__list">
         {elements.map((element, index) => (
           <li key={index}>
             {/* TODO: this is not the best way to implement these links, rethink it an refactor */}
