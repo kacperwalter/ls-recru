@@ -1,4 +1,7 @@
 import { Roboto_Mono } from 'next/font/google'
+
+import '@/app/common/styles/colors.scss'
+import '@/app/common/styles/fonts.scss'
 import '@/app/common/styles/globals.scss'
 
 const roboto = Roboto_Mono({ subsets: ['latin'] })

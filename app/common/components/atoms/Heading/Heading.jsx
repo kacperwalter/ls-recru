@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./Heading.scss"
+
 const TagName = ({ type, children }) => {
   return React.createElement(type, { className: type }, children)
 }

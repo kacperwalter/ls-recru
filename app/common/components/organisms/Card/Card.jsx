@@ -1,5 +1,6 @@
 import Image from "next/image"
 
+import Heading from "@/app/common/components/atoms/Heading/Heading"
 import CardLink from "./CardLink"
 
 import './Card.scss'
@@ -13,7 +14,7 @@ const Card = ({ data, image }) => {
         alt={data.name}
       />
       <div className="card__info">
-        <h3 className="card__heading">{data.name}</h3>
+        <Heading type="h3" text={data.name} />
         <CardLink data={data} />
       </div>
     </article>
