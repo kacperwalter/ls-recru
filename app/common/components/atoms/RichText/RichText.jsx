@@ -1,6 +1,6 @@
-const RichText = ({ text }) => {
+const RichText = ({ text, children }) => {
   return (
-    <p>{text}</p>
+    <p className="rich-text">{text || children}</p>
   )
 }
 

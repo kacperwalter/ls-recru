@@ -1,0 +1,22 @@
+.details {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  .rich-text:first-child {
+    font-weight: 100;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+  }
+
+  &__image {
+    max-width: 50rem;
+  }
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+  }
+}
