@@ -7,6 +7,8 @@ import getVehicle from "@/app/services/getVehicle"
 import parseStringToSlug from "@/app/utils/parseStringToSlug"
 import splitId from "@/app/utils/splitId"
 
+import LinkedElements from "@/app/common/components/organisms/LinkedElements/LinkedElements"
+
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
 
 const Character = async ({ characterId }) => {
@@ -23,18 +25,7 @@ const Character = async ({ characterId }) => {
       <p>Gender: {character.gender}</p>
 
       {vehicles.length > 0 && (
-          <section>
-            <h2>Connected vehicles: </h2>
-            <ul>
-              {vehicles.map((vehicle, index) => (
-                <li key={index}>
-                  <Link href={`/vehicles/${parseStringToSlug(vehicle.name)}?id=${splitId(vehicle.url)}`}>
-                    {vehicle.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <LinkedElements elements={vehicles} heading="Connected vehicles:" type="vehicles" />
         )}
     </main>
   )
