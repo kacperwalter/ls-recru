@@ -1,7 +1,7 @@
 
 #  Happy to see you there, recruiter! 👋🏻
 ## TL;DR;
-I prefer pair programming for assessing developer skills over time-consuming recruitment tasks. This project is my response to a most typical recruitment task, showcasing my frontend skills.
+I prefer pair programming for assessing developer skills over time-consuming recruitment tasks. This project is my response to a most typical recruitment task, covering my frontend and some unit testing skills.
 
 ## What's going on with this repo
 To be honest with you, **I am a strong advocate for pair programming sessions as a more effective way to assess developer skills, as opposed to time-consuming and often unproductive recruitment tasks.** Having completed numerous recru tasks throughout my career, I've learned valuable lessons from some, while many ended up being a significant time sink without even minimal feedback.  
