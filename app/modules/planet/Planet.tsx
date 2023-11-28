@@ -10,8 +10,18 @@ import RichText from "@/app/common/components/atoms/RichText/RichText"
 
 import temporaryPlanetImage from "@/public/temp-planet.webp"
 
-const Planet = async ({ planetId }) => {
-  const planet = await getPlanet(planetId)
+interface Planet {
+  name: string
+  population: string
+  residents: string[]
+}
+
+type PlanetProps = {
+  planetId: string
+}
+
+const Planet = async ({ planetId }: PlanetProps) => {
+  const planet: Planet = await getPlanet(planetId)
   const residents = await Promise.all(planet.residents.map(resident => getCharacter(splitId(resident))))
 
   return (

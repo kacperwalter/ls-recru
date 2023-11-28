@@ -8,8 +8,18 @@ import RichText from "@/app/common/components/atoms/RichText/RichText"
 
 import temporaryVehicleImage from "@/public/temp-vehicle.png"
 
-const Vehicle = async ({ vehicleId }) => {
-  const vehicle = await getVehicle(vehicleId)
+type VehicleProps = {
+  vehicleId: string
+}
+
+interface Vehicle {
+  name: string
+  vehicle_class: string
+  pilots: string[]
+}
+
+const Vehicle = async ({ vehicleId }: VehicleProps) => {
+  const vehicle: Vehicle = await getVehicle(vehicleId)
   const pilots = await Promise.all(vehicle.pilots.map(pilot => getCharacter(splitId(pilot))))
 
   return (
