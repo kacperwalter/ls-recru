@@ -1,2 +1,5 @@
-// TODO enum
-export const PROD_API_URL = 'https://swapi.dev/api'
+enum API {
+  PROD_API_URL = 'https://swapi.dev/api'
+}
+
+export default API

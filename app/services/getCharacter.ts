@@ -1,7 +1,7 @@
-import { PROD_API_URL } from "@/app/constants/api"
+import API from '../constants/api'
 
 const getCharacter = async id => {
-  const response = await fetch(`${PROD_API_URL}/people/${id}`)
+  const response = await fetch(`${API.PROD_API_URL}/people/${id}`)
   const data = await response.json()
   return { ...data, id }
 }
