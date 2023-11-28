@@ -5,11 +5,19 @@ import CardLink from "./CardLink"
 
 import './Card.scss'
 
-const Card = ({ data, image }) => {
+type CardProps = {
+  data: {
+    name: string
+    slug: string
+  }
+  image: string
+}
+
+const Card = ({ data, image }: CardProps) => {
   return (
     <article className="card">
       <Image
-        className="card__image" 
+        className="card__image"
         src={image}
         alt={data.name}
       />

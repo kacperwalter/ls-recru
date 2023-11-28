@@ -1,4 +1,9 @@
-const RichText = ({ text, children }) => {
+type RichTextProps = {
+  text?: string
+  children?: React.ReactNode
+}
+
+const RichText = ({ text, children }: RichTextProps) => {
   return (
     <p className="rich-text">{text || children}</p>
   )

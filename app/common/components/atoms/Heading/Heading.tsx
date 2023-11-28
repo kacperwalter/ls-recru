@@ -2,11 +2,21 @@ import React from "react"
 
 import "./Heading.scss"
 
-const TagName = ({ type, children }) => {
+type TagNameProps = {
+  type: string
+  children: React.ReactNode
+}
+
+const TagName = ({ type, children }: TagNameProps) => {
   return React.createElement(type, { className: type }, children)
 }
 
-const Heading = ({ type = 'h1', text }) => {
+type HeadingProps = {
+  type?: string
+  text: string
+}
+
+const Heading = ({ type = 'h1', text }: HeadingProps) => {
   return (
     <TagName type={type}>
       {text}
