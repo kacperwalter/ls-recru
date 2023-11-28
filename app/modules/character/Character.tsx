@@ -12,7 +12,11 @@ import RichText from "@/app/common/components/atoms/RichText/RichText"
 
 import temporaryAvatar from "@/public/temp-avatar.jpeg"
 
-const Character = async ({ characterId }) => {
+type CharacterProps = {
+  characterId: string
+}
+
+const Character = async ({ characterId }: CharacterProps) => {
   const character = await getCharacter(characterId)
   const planetId = splitId(character.homeworld)
   const planet = await getPlanet(splitId(character.homeworld))

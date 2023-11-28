@@ -5,7 +5,14 @@ import Heading from "@/app/common/components/atoms/Heading/Heading"
 
 import "./Details.scss"
 
-const Details = ({ image, imageAlt, heading, children }) => {
+type DetailsProps = {
+  image: string
+  imageAlt: string
+  heading: string
+  children: React.ReactNode
+}
+
+const Details = ({ image, imageAlt, heading, children }: DetailsProps) => {
   return (
     <main className="details">
       <Wrapper>
