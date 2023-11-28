@@ -3,12 +3,19 @@ import Header from '@/app/common/components/molecules/Header/Header'
 
 import './Listing.scss'
 
-const Listing = ({ children, heading, headingType, caption }) => {
+type ListingProps = {
+  children: React.ReactNode
+  heading: string
+  headingType?: string
+  caption: string
+}
+
+const Listing = ({ children, heading, headingType, caption }: ListingProps) => {
   return (
     <main className="listing">
       <Wrapper>
-        <Header 
-          headingText={heading} 
+        <Header
+          headingText={heading}
           caption={caption}
           headingType={headingType}
         />

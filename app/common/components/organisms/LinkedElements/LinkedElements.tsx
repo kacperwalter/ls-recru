@@ -7,7 +7,16 @@ import Heading from "@/app/common/components/atoms/Heading/Heading"
 
 import "./LinkedElements.scss"
 
-const LinkedElements = ({ elements, heading, type }) => {
+type LinkedElementsProps = {
+  elements: {
+    name: string
+    url: string
+  }[]
+  heading: string
+  type: string
+}
+
+const LinkedElements = ({ elements, heading, type }: LinkedElementsProps) => {
   return (
     <section className="linked-elements">
       <Heading type="h3" text={heading} />

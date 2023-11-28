@@ -1,4 +1,4 @@
-const parseStringToSlug = str => {
+const parseStringToSlug = (str: string): string => {
   !str && ''
   const slug = str
     .toLowerCase()

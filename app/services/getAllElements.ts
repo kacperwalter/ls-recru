@@ -2,10 +2,12 @@ import getCharacter from './getCharacter'
 import getPlanet from './getPlanet'
 import getVehicle from './getVehicle'
 
-const getAllElements = async (type, count) => {
+type ElementType = 'characters' | 'planets' | 'vehicles'
+
+const getAllElements = async (type: ElementType, count: number) => {
   const allData = []
 
-  const fetchData = async i => {
+  const fetchData = async (i: number) => {
     switch (type) {
       case 'characters':
         return await getCharacter(i)
@@ -24,7 +26,7 @@ const getAllElements = async (type, count) => {
   }
 
   type === 'characters' && allData.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))
-
+  
   return allData
 }
 
