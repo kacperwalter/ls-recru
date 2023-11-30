@@ -7,13 +7,13 @@ type TagNameProps = {
   children: React.ReactNode
 }
 
-const TagName = ({ type, children }: TagNameProps) => {
-  return React.createElement(type, { className: type }, children)
-}
-
 type HeadingProps = {
   type?: string
   text: string
+}
+
+const TagName = ({ type, children }: TagNameProps) => {
+  return React.createElement(type, { className: type }, children)
 }
 
 const Heading = ({ type = 'h1', text }: HeadingProps) => {
